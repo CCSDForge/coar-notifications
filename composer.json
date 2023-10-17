@@ -15,7 +15,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.4",
-    "doctrine/orm": "^2.14.1",
+    "doctrine/orm": "<=2.6.2",
     "monolog/monolog": "^1.26",
     "symfony/cache": "^5.3",
     "ext-pdo": "*",
