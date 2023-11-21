@@ -1,15 +1,18 @@
 <?php
+
 namespace cottagelabs\coarNotifications;
 
 /**
  * A simple class to describe URLS for COAR Notifications.
  */
-class COARNotificationURL {
+class COARNotificationURL
+{
     private string $id;
     private string $mediaType;
     private array $type;
 
-    public function __construct(string $id, string $mediaType, array $type) {
+    public function __construct(string $id, string $mediaType, array $type)
+    {
         $this->id = $id;
         $this->mediaType = $mediaType;
         $this->type = $type;

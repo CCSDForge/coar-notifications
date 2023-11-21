@@ -1,4 +1,5 @@
 <?php
+
 namespace cottagelabs\coarNotifications;
 
 use JsonSerializable;
@@ -6,15 +7,17 @@ use stdClass;
 
 /**
  *  The intended destination of the activity, typically the service which consumes the notification.
- * 
+ *
  *  See: https://notify.coar-repositories.org/patterns/
  */
-class COARNotificationTarget implements JsonSerializable {
+class COARNotificationTarget implements JsonSerializable
+{
     private string $id;
     private string $inbox;
     private string $type;
 
-    public function __construct(string $id, string $inbox, string $type = "Service") {
+    public function __construct(string $id, string $inbox, string $type = "Service")
+    {
         $this->id = $id;
         $this->inbox = $inbox;
         $this->type = $type;
