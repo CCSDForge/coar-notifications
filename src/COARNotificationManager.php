@@ -37,7 +37,7 @@ function validate_notification($notification_json): void {
         throw new COARNotificationException("The '@context' property must include Activity Streams 2.0 (https://www.w3.org/ns/activitystreams).");
     }
 
-    if(!count(preg_grep("#^http[s]?://purl.org/coar/notify$#", $notification_json['@context']))) {
+    if(!count(preg_grep("#^http[s]?://(purl.org/coar/notify|coar-notify.net)$#", $notification_json['@context']))) {
         throw new COARNotificationException("The '@context' property must include Notify (https://purl.org/coar/notify).");
     }
 
